@@ -36,6 +36,7 @@ var (
 	groupaddCmd = "groupadd"
 	groupdelCmd = "groupdel"
 	mdadmCmd    = "mdadm"
+	stratisCmd  = "stratis"
 	mountCmd    = "mount"
 	sgdiskCmd   = "sgdisk"
 	modprobeCmd = "modprobe"
@@ -85,6 +86,7 @@ func SystemConfigDir() string   { return fromEnv("SYSTEM_CONFIG_DIR", systemConf
 func GroupaddCmd() string { return groupaddCmd }
 func GroupdelCmd() string { return groupdelCmd }
 func MdadmCmd() string    { return mdadmCmd }
+func StratisCmd() string  { return stratisCmd }
 func MountCmd() string    { return mountCmd }
 func SgdiskCmd() string   { return sgdiskCmd }
 func ModprobeCmd() string { return modprobeCmd }

@@ -192,6 +192,16 @@ type Raid struct {
 
 type RaidOption string
 
+type StratisPool struct {
+	Devices []Device `json:"devices"`
+	Name    string   `json:"poolName"`
+}
+
+type StratisFilesystem struct {
+	PoolName string `json:"poolName"`
+	Name     string `json:"name"`
+}
+
 type Resource struct {
 	Compression  *string      `json:"compression,omitempty"`
 	HTTPHeaders  HTTPHeaders  `json:"httpHeaders,omitempty"`
@@ -213,6 +223,9 @@ type Storage struct {
 	Links       []Link       `json:"links,omitempty"`
 	Luks        []Luks       `json:"luks,omitempty"`
 	Raid        []Raid       `json:"raid,omitempty"`
+
+	StratisPools       []StratisPool       `json:"stratisPools,omitempty"`
+	StratisFilesystems []StratisFilesystem `json:"stratisFilesystems,omitempty"`
 }
 
 type Systemd struct {
